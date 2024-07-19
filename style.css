@@ -14,9 +14,6 @@ header{
     max-width: 80%;
     margin: auto;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     position: relative;
     z-index: 100;
 }
@@ -26,6 +23,10 @@ header a{
 }
 header img{
     padding: 10px 20px;
+}
+nav{
+    display: flex;
+    align-items: center;
 }
 /* carousel */
 .carousel{
