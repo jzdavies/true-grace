@@ -16,12 +16,16 @@ header{
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     position: relative;
     z-index: 100;
 }
 header a{
     color: #eee;
-    margin-right: 40px;
+    padding: 10px 20px;
+}
+header img{
+    padding: 10px 20px;
 }
 /* carousel */
 .carousel{
