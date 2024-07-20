@@ -138,7 +138,7 @@ nav{
 .arrows{
     position: absolute;
     top: 80%;
-    right: 60%;
+    left: 10%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
@@ -302,10 +302,6 @@ nav{
 .carousel.prev .list .item:nth-child(2) .content .buttons
 {
     animation: contentOut 1.5s linear 1 forwards!important;
-}
-
-.glass {
-    backdrop-filter: blur(10px);
 }
 
 @keyframes contentOut{
