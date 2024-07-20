@@ -56,12 +56,13 @@ form.onsubmit = async function(event) {
     });
 
     if (response.ok) {
-        formResponse.style.display = "block";
+        form.style.display: "none";
+        formResponse.style.display = "flex";
         formResponse.innerHTML = "Thank you for your message!";
         form.reset();
     } else {
-        formResponse.style.display = "block";
-        formResponse.innerHTML = "There was an error sending your message. Please try again.";
+        formResponse.style.display = "flex";
+        formResponse.innerHTML = "An error occurred. Please try again.";
     }
 };
 
