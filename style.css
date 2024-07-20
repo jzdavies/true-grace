@@ -62,14 +62,14 @@ nav{
 .carousel .list .item .author{
     font-weight: bold;
     letter-spacing: 10px;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 48px rgba(0, 0, 0, 0.5);
 }
 .carousel .list .item .title,
 .carousel .list .item .topic{
     font-size: 5em;
     font-weight: bold;
     line-height: 1.3em;
-    text-shadow: 1px 1px 50px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 48px rgba(0, 0, 0, 0.2);
 }
 .carousel .list .item .topic{
     color: #f1683a;
