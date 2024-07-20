@@ -10,7 +10,8 @@ a{
     text-decoration: none;
 }
 header{
-    left: 10%;
+    width: 1140px;
+    max-width: 80%;
     margin: auto;
     height: 50px;
     position: relative;
@@ -49,8 +50,11 @@ nav{
 .carousel .list .item .content{
     position: absolute;
     top: 20%;
-    left: 10%;
-    padding-right: 50%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px #0004;
@@ -88,10 +92,6 @@ nav{
     background-color: transparent;
     border: 1px solid #fff;
     color: #eee;
-}
-
-.glass {
-    backdrop-filter: blur(20px);
 }
 /* thumbail */
 .thumbnail{
@@ -138,7 +138,7 @@ nav{
 .arrows{
     position: absolute;
     top: 80%;
-    left: 10%;
+    right: 60%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
