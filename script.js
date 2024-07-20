@@ -56,7 +56,7 @@ form.onsubmit = async function(event) {
     });
 
     if (response.ok) {
-        form.style.display: "none";
+        form.style.display = "none";
         formResponse.style.display = "flex";
         formResponse.innerHTML = "Thank you for your message!";
         form.reset();
