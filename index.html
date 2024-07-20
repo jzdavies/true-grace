@@ -9,21 +9,51 @@
 <body>
     <header>
         <nav>
-            <img src="https://deliver.sirv.com/Images/logo-white.png?w=100">
-            <!-- <img width="100px" src="./img/logo-white.png"> -->
+            <!-- <img src="https://deliver.sirv.com/Images/logo-white.png?w=100"> -->
+            <img width="100px" src="./img/logo-white.png">
             <a href="">Home</a>
             <a href="">Mission</a>
-            <a href="">Contact</a>
+            <button>Contact</button>
         </nav>
     </header>
+
+    <div class="popup-contact-form" id="popupContactForm">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">&times;</span>
+            <h2 class="popup-heading">CONTACT US</h2>
+            <form id="contactForm" action="https://formspree.io/f/xkgwonyj" method="POST">
+                <div class="input">
+                    <label for="name">NAME:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="input">
+                    <label for="email">EMAIL:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input">
+                    <label for="phone">PHONE:</label>
+                    <input type="phone" id="phone" name="phone" required>
+                </div>
+
+                <div class="input">
+                    <label for="message">MESSAGE:</label>
+                    <textarea id="message" rows="6" name="message" required></textarea>
+                </div>
+                <button class="submit-btn" type="submit">SUBMIT</button>
+            </form>
+            <div id="formResponse" style="display: none;"></div>
+        </div>
+    </div>
 
     <!-- carousel -->
     <div class="carousel">
         <!-- list item -->
         <div class="list">
             <div class="item">
-                <img src="https://cdn.truegrace.online/Images/biblical-studies.jpg?w=1920">
-                <!-- <img width="1920px" src="./img/biblical-studies.jpg"> -->
+                <!-- <img src="https://cdn.truegrace.online/Images/biblical-studies.jpg?w=1920"> -->
+                <img width="1920px" src="./img/biblical-studies.jpg">
                 <div class="content">
                     <div class="author">TRUE GRACE</div>
                     <div class="title">SPIRITUAL</div>
@@ -33,14 +63,13 @@
                         Providing comprehensive biblical education accessible to everyone, with a focus on interpreting the Scriptures in their original languages for a deeper and more accurate understanding. 
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button class="glass">CONTACT</button>
+                        <button>LET'S GO</button>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <img src="https://cdn.truegrace.online/Images/ministry-training.jpeg?w=1920">
-                <!-- <img width="1920px" src="./img/ministry-training.jpeg"> -->
+                <!-- <img src="https://cdn.truegrace.online/Images/ministry-training.jpeg?w=1920"> -->
+                <img width="1920px" src="./img/ministry-training.jpeg">
                 <div class="content">
                     <div class="author">TRUE GRACE</div>
                     <div class="title">PASTOR</div>
@@ -49,14 +78,13 @@
                         Equipping, mentoring, and offering unwavering support to ministry leaders within grace-oriented churches, fostering their growth and effectiveness in their spiritual leadership.
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button class="glass">CONTACT</button>
+                        <button>CONTACT</button>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <img src="https://cdn.truegrace.online/Images/grace-united.jpeg?w=1920">
-                <!-- <img width="1920px" src="./img/grace-united.jpeg"> -->
+                <!-- <img src="https://cdn.truegrace.online/Images/grace-united.jpeg?w=1920"> -->
+                <img width="1920px" src="./img/grace-united.jpeg">
                 <div class="content">
                     <div class="author">TRUE GRACE</div>
                     <div class="title">GRACE</div>
@@ -65,14 +93,13 @@
                         Facilitating connections among grace-oriented churches and organizations, united in their mission to spread the good news of Jesus' grace to people across the globe.
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button class="glass">CONTACT</button>
+                        <button>CONTACT</button>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <img src="https://cdn.truegrace.online/Images/church-planting.jpeg?w=1920">
-                <!-- <img width="1920px" src="./img/church-planting.jpeg"> -->
+                <!-- <img src="https://cdn.truegrace.online/Images/church-planting.jpeg?w=1920"> -->
+                <img width="1920px" src="./img/church-planting.jpeg">
                 <div class="content">
                     <div class="author">TRUE GRACE</div>
                     <div class="title">CHURCH</div>
@@ -81,8 +108,7 @@
                         Initiating and rejuvenating churches that are dedicated to sharing the good news of God's grace, fostering vibrant and grace-centered communities.
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button class="glass">CONTACT</button>
+                        <button>CONTACT</button>
                     </div>
                 </div>
             </div>
@@ -90,8 +116,8 @@
         <!-- list thumnail -->
         <div class="thumbnail">
             <div class="item">
-                <img src="https://cdn.truegrace.online/Images/biblical-studies.jpg?h=300">
-                <!-- <img height="300px" src="./img/biblical-studies.jpg"> -->
+                <!-- <img src="https://cdn.truegrace.online/Images/biblical-studies.jpg?h=300"> -->
+                <img height="300px" src="./img/biblical-studies.jpg">
                 <div class="content">
                     <div class="title">
                         Biblical Studies
@@ -102,8 +128,8 @@
                 </div>
             </div>
             <div class="item">
-                <img src="https://cdn.truegrace.online/Images/ministry-training.jpeg?h=300">
-                <!-- <img height="300px" src="./img/ministry-training.jpeg"> -->
+                <!-- <img src="https://cdn.truegrace.online/Images/ministry-training.jpeg?h=300"> -->
+                <img height="300px" src="./img/ministry-training.jpeg">
                 <div class="content">
                     <div class="title">
                         Ministry Training
@@ -114,8 +140,8 @@
                 </div>
             </div>
             <div class="item">
-                <img src="https://cdn.truegrace.online/Images/grace-united.jpeg?h=300">
-                <!-- <img height="300px" src="./img/grace-united.jpeg"> -->
+                <!-- <img src="https://cdn.truegrace.online/Images/grace-united.jpeg?h=300"> -->
+                <img height="300px" src="./img/grace-united.jpeg">
                 <div class="content">
                     <div class="title">
                         Grace United
@@ -126,8 +152,8 @@
                 </div>
             </div>
             <div class="item">
-                <img src="https://cdn.truegrace.online/Images/church-planting.jpeg?h=300">
-                <!-- <img height="300px" src="./img/church-planting.jpeg"> -->
+                <!-- <img src="https://cdn.truegrace.online/Images/church-planting.jpeg?h=300"> -->
+                <img height="300px" src="./img/church-planting.jpeg">
                 <div class="content">
                     <div class="title">
                         Church Planting
