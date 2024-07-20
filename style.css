@@ -22,6 +22,14 @@ header a{
     padding: 10px 20px;
     cursor: pointer;
 }
+@media screen and (max-width: 490px) {
+    header a{
+        display: none;
+    }
+    nav button{
+        display: none;
+    }
+}
 header img{
     padding: 10px 20px 10px 0px;
 }
@@ -109,6 +117,21 @@ nav button {
 @media screen and (max-width: 678px) {
     .popup-content {
         width: 50vw;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .popup-heading {
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+    .input label {
+        font-size: 10px!important;
+    }
+    .submit-btn {
+        letter-spacing: 2px;
+        font-size: 12px !important;
+        margin-bottom: 0px !important;
     }
 }
 
@@ -238,6 +261,37 @@ nav button {
     color: #fff;
     font-weight: 600;
 }
+.carousel .list .item .des {
+    font-size: 18px;
+    font-weight: 400;
+    text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.8);  
+}
+
+@media screen and (max-width: 490px) {
+
+    .carousel .list .item .author{
+        letter-spacing: 3px;
+        font-size: 10px;
+    }
+    .carousel .list .item .des{
+        font-size: 14px;
+    }
+    .carousel .list .item .title,
+    .carousel .list .item .topic{
+        font-size: 2rem;
+    }
+
+    .carousel .list .item .buttons{
+        grid-template-columns: repeat(1, 130px);
+        grid-template-rows: 32px;
+        gap: 5px;
+        margin-top: 20px;
+    }
+    .carousel .list .item .buttons button{
+        font-size: 12px;
+    }
+}
+
 /* thumbail */
 .thumbnail{
     position: absolute;
@@ -273,10 +327,15 @@ nav button {
 .thumbnail .item .content .description{
     font-weight: 300;
 }
-.des {
-  font-size: 18px;
-  font-weight: 400;
-  text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.8);  
+
+@media screen and (max-width: 490px) {
+    .thumbnail {
+        bottom: 25px;
+    }
+    .thumbnail .item {
+        width: 120px;
+        height: 160px;
+    }
 }
 
 /* arrows */
@@ -306,6 +365,17 @@ nav button {
 .arrows button:hover{
     background-color: #fff;
     color: #000;
+}
+
+@media screen and (max-width: 490px) {
+    .arrows{
+        width: 100px;
+    }
+    .arrows button {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
 }
 
 /* animation */
