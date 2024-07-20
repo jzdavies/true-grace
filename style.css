@@ -305,6 +305,10 @@ nav{
     animation: contentOut 1.5s linear 1 forwards!important;
 }
 
+.glass {
+    backdrop-filter: blur(10px);
+}
+
 @keyframes contentOut{
     to{
         transform: translateY(-150px);

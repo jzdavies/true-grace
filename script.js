@@ -1,5 +1,6 @@
 // Step 1: Get DOM elements
 let nextDom = document.getElementById('next');
+let pauseDom = document.getElementById('pause');
 let prevDom = document.getElementById('prev');
 
 let carouselDom = document.querySelector('.carousel');
@@ -10,10 +11,21 @@ let timeDom = document.querySelector('.carousel .time');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 3000;
-let timeAutoNext = 10000;
+let timeAutoNext = 7000;
+let isPaused = false;
 
 nextDom.onclick = function(){
     showSlider('next');    
+}
+
+pauseDom.onclick = function(){
+    isPaused = !isPaused;
+    pauseDom.textContent = isPaused ? '►' : '||';
+    if (!isPaused) {
+        nextDom.click();
+    } else {
+        clearTimeout(runNextAuto);
+    }
 }
 
 prevDom.onclick = function(){
@@ -45,8 +57,10 @@ function showSlider(type){
         carouselDom.classList.remove('prev');
     }, timeRunning);
 
-    clearTimeout(runNextAuto);
-    runNextAuto = setTimeout(() => {
-        nextDom.click();
-    }, timeAutoNext);
+    if (!isPaused) {
+        clearTimeout(runNextAuto);
+        runNextAuto = setTimeout(() => {
+            nextDom.click();
+        }, timeAutoNext);
+    }
 }
