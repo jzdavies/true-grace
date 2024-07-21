@@ -115,8 +115,8 @@ function showSlider(type){
         clearTimeout(runNextAuto);
 
         // Check if the current item is the Biblical Studies item
-        let currentItem = thumbnailBorderDom.querySelector('.item:nth-child(1) .content .title').innerText;
-        if (currentItem == "Ministry Training") {
+        let currentItem = thumbnailBorderDom.querySelector('.item:nth-child(4) .content .title').innerText;
+        if (currentItem === "Biblical Studies") {
             runNextAuto = setTimeout(() => {
                 nextDom.click();
             }, timeBiblicalStudies);
