@@ -14,7 +14,7 @@ header{
     margin: auto;
     height: 50px;
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     z-index: 100;
 }
 header a{
@@ -42,6 +42,7 @@ nav button {
     border: none;
     color: #eee;
     padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -246,7 +247,21 @@ nav button {
     gap: 5px;
     margin-top: 20px;
 }
-.carousel .list .item .buttons button{
+.carousel .list .item .buttons button {
+    border-radius: 4px;
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.carousel .list .item .buttons .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#000;
     border-radius: 4px;
     border: none;
     background-color: #eee;
