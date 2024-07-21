@@ -11,7 +11,6 @@ let carouselDom = document.querySelector('.carousel');
 let SliderDom = carouselDom.querySelector('.carousel .list');
 let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
 let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
-console.log(thumbnailItemsDom[1]);
 let timeDom = document.querySelector('.carousel .time');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
@@ -89,7 +88,7 @@ prevDom.onclick = function(){
 let runTimeOut;
 let runNextAuto = setTimeout(() => {
     nextDom.click();
-}, timeAutoNext);
+}, timeBiblicalStudies);
 
 function showSlider(type){
     let SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
