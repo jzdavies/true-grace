@@ -16,6 +16,7 @@ let timeDom = document.querySelector('.carousel .time');
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 3000;
 let timeAutoNext = 7000;
+let timeBiblicalStudies = 20000;
 let isPaused = false;
 
 // When the user clicks the button, open the modal 
@@ -111,8 +112,17 @@ function showSlider(type){
 
     if (!isPaused) {
         clearTimeout(runNextAuto);
-        runNextAuto = setTimeout(() => {
-            nextDom.click();
-        }, timeAutoNext);
+
+        // Check if the current item is the Biblical Studies item
+        let currentItem = SliderDom.querySelector('.carousel .list .item:nth-child(1)');
+        if (currentItem.classList.contains('biblical-studies')) {
+            runNextAuto = setTimeout(() => {
+                nextDom.click();
+            }, timeBiblicalStudies);
+        } else {
+            runNextAuto = setTimeout(() => {
+                nextDom.click();
+            }, timeAutoNext);
+        }
     }
 }
