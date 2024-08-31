@@ -23,8 +23,13 @@ header {
     z-index: 100;
 }
 
-header img {
+header #logo {
+    width: 140px;
     padding: 10px 20px 10px 0px;
+}
+
+header #menu {
+    display: none;
 }
 
 header a {
@@ -33,12 +38,30 @@ header a {
     cursor: pointer;
 }
 
+header #menu {
+    width: 30px;
+    height: 30px;
+}
+
 @media screen and (max-width: 490px) {
+    header {
+        padding-left: 24px;
+    }
+
     header a {
         display: none;
     }
     nav button {
         display: none;
+    }
+
+    nav {
+        justify-content: space-between;
+        padding-right: 32px;
+    }
+
+    header #menu {
+        display: block;
     }
 }
 
@@ -58,7 +81,8 @@ nav button {
 }
 
 /* Popup Contact Form */
-.popup-contact-form {
+.popup-contact-form,
+.popup-giving {
     display: none;
     position: absolute;
     z-index: 1000;
@@ -66,10 +90,24 @@ nav button {
     top: 0;
     width: 100%;
     height: 100vh;
+    height: 100dvh;
     background-color: rgba(0, 0, 0, 0.7);
     align-content: center;
     align-items: center;
     justify-content: center;
+}
+
+.popup-giving h2 {
+    font-size: 24px;
+}
+
+.popup-giving h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.popup-giving p {
+    font-size: 16px;
 }
 
 .popup-content {
@@ -112,6 +150,60 @@ nav button {
 .close-btn:focus {
     color: white;
     text-decoration: none;
+}
+
+/* Popup Menu */
+.popup-menu {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 1);
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.popup-menu {
+    .close-btn {
+        font-size: 48px;
+        font-weight: 200;
+        color: white;
+        margin-right: -8px;
+    }
+}
+
+.menu-items {
+    position: relative;
+    padding: 36px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.menu-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f1f1f1; /* Light color for the heading */
+    text-align: left;
+}
+
+.menu-link, .menu-button {
+    display: block; /* Ensures each item takes up full width */
+    margin: 4px 0; /* Space between items */
+    padding: 10px 0;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from links */
+    transition: background 0.3s;
+    text-align: left; /* Align the text to the left */
+    width: fit-content; /* Adjust width to fit content */
 }
 
 /* Form Styles */
@@ -209,6 +301,7 @@ nav button {
 /* Carousel Styles */
 .carousel {
     height: 100vh;
+    height: 100dvh;
     margin-top: -50px;
     width: 100vw;
     overflow: hidden;
@@ -226,6 +319,7 @@ nav button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(50%);
 }
 
 .carousel .list .item .content {
@@ -345,13 +439,16 @@ nav button {
 }
 
 @media screen and (max-width: 490px) {
+    .carousel .list .item .content {
+        left: 24px;
+    }
     .carousel .list .item .author {
         letter-spacing: 3px;
         font-size: 10px;
     }
 
     .carousel .list .item .des {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .carousel .list .item .title,
@@ -413,7 +510,8 @@ nav button {
 
 @media screen and (max-width: 490px) {
     .arrows {
-        width: 100px;
+        width: 110px;
+        left: 24px;
     }
 
     .arrows button {
@@ -624,6 +722,13 @@ nav button {
 
     .carousel .list .item .content .title {
         font-size: 30px;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 490px) {
+    .carousel .list .item .content {
+        padding-right: 32px;
     }
 }
 

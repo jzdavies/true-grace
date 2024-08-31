@@ -9,17 +9,20 @@
 <body>
     <header>
         <nav>
-            <img src="https://deliver.sirv.com/img/logo-white.png?w=140">
+            <img id="logo" src="https://deliver.sirv.com/img/logo-white.svg">
             <!-- <img width="100px" src="./img/logo-white.png"> -->
             <a href="">Home</a>
             <a href="https://www.graceondemand.org/offers/LasH9HVk/checkout">Register</a>
             <button>Contact</button>
+            <button>Give</button>
+            <img id="menu" src="https://deliver.sirv.com/img/menu.svg" alt="Menu" role="button" aria-label="Toggle Navigation">
         </nav>
     </header>
 
+    <!-- contact form -->
     <div class="popup-contact-form" id="popupContactForm">
         <div class="popup-content">
-            <span class="close-btn" id="closePopup">&times;</span>
+            <span class="close-btn" id="closeContact">&times;</span>
             <h2 class="popup-heading">CONTACT US</h2>
             <form id="contactForm" action="https://formspree.io/f/xkgwonyj" method="POST">
                 <div class="input">
@@ -46,6 +49,35 @@
             <div id="formResponse" style="display: none;"></div>
         </div>
     </div>
+
+    <!-- give form -->
+    <div class="popup-giving" id="popupGiving" role="dialog" aria-labelledby="givingHeading" aria-modal="true">
+        <div class="popup-content">
+            <span class="close-btn" id="closeGiving">&times;</span>
+            <h2>Giving</h2>
+            <p>If you would like to partner financially with True Grace Ministries, you can make checks payable to:</p>
+            <h3>True Grace Ministries Int'l</h3>
+            <p>
+                <strong style="color: #f1683a;">Mail donations to:</strong><br>
+                True Grace Ministries Int'l<br>
+                1431 Rustic Trail<br>
+                Salado, TX 76571
+            </p>
+        </div>
+    </div>
+    
+
+    <!-- menu -->
+    <div class="popup-menu" id="popupMenu">
+        <div class="menu-items">
+            <span class="close-btn" id="closeMenu">&times;</span>
+            <h1 class="menu-heading">MENU</h1>
+            <a href="" class="menu-link">Home</a>
+            <a href="https://www.graceondemand.org/offers/LasH9HVk/checkout" class="menu-link">Register</a>
+            <button class="menu-button">Contact</button>
+            <button class="menu-button">Give</button>
+        </div>
+    </div>    
 
     <!-- carousel -->
     <div class="carousel">
@@ -120,10 +152,10 @@
                 <!-- <img height="300px" src="./img/biblical-studies.jpg"> -->
                 <div class="content">
                     <div class="title">
-                        Biblical Studies
+                        Spiritual Development
                     </div>
                     <div class="description">
-                        Development
+                        Studies
                     </div>
                 </div>
             </div>
