@@ -730,6 +730,16 @@ nav button {
     .carousel .list .item .content {
         padding-right: 32px;
     }
+
+    @keyframes outFrame {
+        to {
+            width: 120px;
+            height: 160px;
+            bottom: 25px;
+            left: 50%;
+            border-radius: 20px;
+        }
+    }
 }
 
 /* Keyframe Animations */
