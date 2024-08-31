@@ -134,6 +134,7 @@ form.addEventListener('submit', async (event) => {
 });
 
 let cycleCount = 0;
+let holdSwipe = false;
 
 // Functions
 function showSlider(type, index) {
@@ -145,11 +146,13 @@ function showSlider(type, index) {
         slider.appendChild(sliderItems[0]);
         thumbnailBorder.appendChild(currentThumbnails[0]);
         carousel.classList.add('next');
+        holdSwipe = true;
     } else if (type === 'prev') {
         cycleCount = 0;
         slider.prepend(sliderItems[sliderItems.length - 1]);
         thumbnailBorder.prepend(currentThumbnails[currentThumbnails.length - 1]);
         carousel.classList.add('prev');
+        holdSwipe = true;
     } else {
         handleThumbnailClick(index, sliderItems, currentThumbnails); 
     }
@@ -171,12 +174,14 @@ function handleThumbnailClick(index, sliderItems, thumbnailItems) {
         thumbnailBorder.appendChild(thumbnailItems[i]);
     }
     carousel.classList.add(classes[index - 1]);
+    holdSwipe = true;
 }
 
 function resetSliderState() {
     clearTimeout(autoNextTimeout);
     autoNextTimeout = setTimeout(() => {
         carousel.classList.remove('next', 'prev', 'second', 'third');
+        holdSwipe = false;
     }, TIME_RUNNING);
 }
 
@@ -192,3 +197,58 @@ function resetAutoNext() {
 
 // Ensure the first item is at the back on initialization
 thumbnailBorder.appendChild(thumbnailItems[0]);
+
+document.addEventListener('DOMContentLoaded', function () {
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        let startX, startY, endX, endY;
+        const SWIPE_THRESHOLD = 50;
+
+        carousel.addEventListener('touchstart', function (e) {
+            if (holdSwipe) return; // Ignore if a swipe/transition is already in progress
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
+
+        carousel.addEventListener('touchmove', function (e) {
+            if (holdSwipe) return; // Ignore if a swipe/transition is already in progress
+            e.preventDefault(); // Prevent scrolling while swiping
+            endX = e.touches[0].clientX;
+            endY = e.touches[0].clientY;
+        });
+
+        carousel.addEventListener('touchend', function () {
+            if (holdSwipe) return; // Ignore if a swipe/transition is already in progress
+            if (typeof startX !== 'undefined' && typeof endX !== 'undefined') {
+                const diffX = startX - endX;
+                const diffY = startY - endY;
+
+                if (Math.abs(diffX) > Math.abs(diffY)) { // Detect horizontal swipe
+                    if (diffX > SWIPE_THRESHOLD) {
+                        moveToNextItem(); // Swipe left
+                    } else if (diffX < -SWIPE_THRESHOLD) {
+                        moveToPreviousItem(); // Swipe right
+                    }
+                }
+            }
+            // Reset values
+            startX = null;
+            startY = null;
+            endX = null;
+            endY = null;
+        });
+
+        function moveToNextItem() {
+            if (holdSwipe) return; // Prevent multiple transitions
+            showSlider('next');
+        }
+
+        function moveToPreviousItem() {
+            if (holdSwipe) return; // Prevent multiple transitions
+            showSlider('prev');
+        }
+    } else {
+        console.log('Touch events not supported on this device.');
+    }
+});
+
+
