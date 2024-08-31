@@ -3,10 +3,16 @@ const form = document.getElementById("contactForm");
 const formResponse = document.getElementById("formResponse");
 
 const popupContactForm = document.getElementById("popupContactForm");
+const popupGiving = document.getElementById("popupGiving");
+const menuBtn = document.getElementById("menu");
 const contactButtons = Array.from(document.querySelectorAll("button"))
     .filter(button => button.textContent.trim().toLowerCase() === "contact");
+const giveButtons = Array.from(document.querySelectorAll("button"))
+    .filter(button => button.textContent.trim().toLowerCase() === "give");
 
-const closeBtn = document.getElementById("closePopup");
+const closeContactBtn = document.getElementById("closeContact");
+const closeGivingBtn = document.getElementById("closeGiving");
+const closeMenuBtn = document.getElementById("closeMenu");
 
 const nextBtn = document.getElementById('next');
 const pauseBtn = document.getElementById('pause');
@@ -65,13 +71,42 @@ contactButtons.forEach(button => {
     });
 });
 
-closeBtn.addEventListener('click', () => {
+giveButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        isPaused = true;
+        pauseBtn.textContent = '►';
+        clearTimeout(runNextAuto);
+        popupGiving.style.display = "flex";
+    });
+});
+
+menuBtn.addEventListener('click', () => {
+    popupMenu.style.display = "flex";
+})
+
+closeContactBtn.addEventListener('click', () => {
     popupContactForm.style.display = "none";
+});
+
+closeGivingBtn.addEventListener('click', () => {
+    popupGiving.style.display = "none";
+});
+
+closeMenuBtn.addEventListener('click', () => {
+    popupMenu.style.display = "none";
+});
+
+document.querySelectorAll('.menu-link, .menu-button').forEach(item => {
+    item.addEventListener('click', function() {
+        popupMenu.style.display = "none";
+    });
 });
 
 window.addEventListener('click', event => {
     if (event.target === popupContactForm) {
         popupContactForm.style.display = "none";
+    } else if (event.target === popupGiving) {
+        popupGiving.style.display = "none";
     }
 });
 
