@@ -661,7 +661,7 @@ nav button {
 }
 
 .carousel.prev .list .item:nth-child(2) img {
-    animation: outFrame 0.5s linear 1 forwards;
+    animation: outFrame 0.5s linear 1 forwards, brightness 2s linear 1 forwards;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -675,6 +675,11 @@ nav button {
         left: 50%;
         border-radius: 20px;
     }
+}
+
+@keyframes brightness {
+    from { filter: brightness(0.5); }
+    to { filter: brightness(1.0); }
 }
 
 .carousel.prev .list .item img {
