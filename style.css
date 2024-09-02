@@ -319,7 +319,7 @@ nav button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.4);
+    filter: brightness(0.5);
 }
 
 .carousel .list .item .content {
@@ -395,6 +395,25 @@ nav button {
     font-weight: 500;
     cursor: pointer;
 }
+
+/* Default image for larger screens (desktop) */
+#responsive-image {
+    content: url('https://deliver.sirv.com/img/spiritual-dev.jpeg?w=1920');
+}
+#responsive-thumb {
+    content: url('https://deliver.sirv.com/img/spiritual-dev.jpeg?w=320');
+}
+
+/* Image for smaller screens (mobile) */
+@media only screen and (max-width: 490px) {
+    #responsive-image {
+        content: url('https://deliver.sirv.com/img/spiritual-development.jpg?w=1920');
+    }
+    #responsive-thumb {
+        content: url('https://deliver.sirv.com/img/spiritual-development.jpg?w=320');
+    }
+}
+
 
 /* Thumbnail Styles */
 .thumbnail {
@@ -597,8 +616,8 @@ nav button {
 }
 
 @keyframes fadeBrightness {
-    from { filter: brightness(1); }
-    to { filter: brightness(0.4); }
+    from { filter: brightness(1.3); }
+    to { filter: brightness(0.5); }
 }
 
 /* Thumbnail Animations */
