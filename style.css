@@ -110,6 +110,20 @@ nav button {
     font-size: 16px;
 }
 
+.tithely-give-button {
+    background-color: #f1683a;
+    color: white;
+    line-height: 1.5;
+    width: 100%; 
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px; 
+    border-radius: 8px;
+    border-width: 0;
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
 .popup-content {
     position: relative;
     backdrop-filter: blur(24px) saturate(180%) brightness(200%);
@@ -166,6 +180,7 @@ nav button {
     align-content: center;
     align-items: flex-start;
     justify-content: center;
+    z-index: 1001;
 }
 
 .popup-menu {
@@ -204,6 +219,10 @@ nav button {
     transition: background 0.3s;
     text-align: left; /* Align the text to the left */
     width: fit-content; /* Adjust width to fit content */
+}
+
+.menu-button {
+    padding: 14px 0;
 }
 
 /* Form Styles */
