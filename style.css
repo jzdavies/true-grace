@@ -451,10 +451,14 @@ nav button {
 /* Image for smaller screens (mobile) */
 @media only screen and (max-width: 490px) {
     #responsive-image {
-        content: url('https://deliver.sirv.com/img/spiritual-development.jpg?w=1920');
+        content: url('https://deliver.sirv.com/img/spiritual-dev.jpeg?w=1920');
+        object-fit: cover;
+        object-position: 75% center;
     }
     #responsive-thumb {
-        content: url('https://deliver.sirv.com/img/spiritual-development.jpg?w=320');
+        content: url('https://deliver.sirv.com/img/spiritual-dev.jpeg?w=320');
+        object-fit: cover;
+        object-position: 75% center;
     }
 }
 

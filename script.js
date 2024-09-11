@@ -26,8 +26,8 @@ const timeDisplay = document.querySelector('.carousel .time');
 
 // Timer settings
 const TIME_RUNNING = 3000;
-const TIME_AUTO_NEXT = 7000;
-const TIME_PRIORITY = 14000;
+const TIME_AUTO_NEXT = 60000;
+const TIME_PRIORITY = 60000;
 let isPaused = false;
 let autoNextTimeout;
 
