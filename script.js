@@ -8,7 +8,7 @@ const menuBtn = document.getElementById("menu");
 const contactButtons = Array.from(document.querySelectorAll("button"))
     .filter(button => button.textContent.trim().toLowerCase() === "contact");
 const giveButtons = Array.from(document.querySelectorAll("button"))
-    .filter(button => button.textContent.trim().toLowerCase() === "give");
+    .filter(button => button.textContent.trim().toLowerCase() === "giving");
 
 const closeContactBtn = document.getElementById("closeContact");
 const closeGivingBtn = document.getElementById("closeGiving");
@@ -26,7 +26,7 @@ const timeDisplay = document.querySelector('.carousel .time');
 
 // Timer settings
 const TIME_RUNNING = 3000;
-const TIME_AUTO_NEXT = 60000;
+const TIME_AUTO_NEXT = 30000;
 const TIME_PRIORITY = 60000;
 let isPaused = false;
 let autoNextTimeout;
@@ -198,6 +198,7 @@ function resetAutoNext() {
 // Ensure the first item is at the back on initialization
 thumbnailBorder.appendChild(thumbnailItems[0]);
 
+/*
 document.addEventListener('DOMContentLoaded', function () {
     if ('ontouchstart' in window || navigator.maxTouchPoints) {
         let startX, startY, endX, endY;
@@ -250,4 +251,4 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Touch events not supported on this device.');
     }
 });
-
+*/
