@@ -988,6 +988,7 @@ nav button {
 /* Media Queries */
 @media screen and (max-width: 490px) {
     .god {
+        padding: 3rem 0;
         flex-direction: column;
         align-items: flex-start;
         height: auto;
