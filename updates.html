@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Information -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>True Grace</title>
+        <link rel="icon" type="image/x-icon" href="https://deliver.sirv.com/img/favicon.ico">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="style-updates.css">  
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <nav>
+                <img id="logo" src="https://deliver.sirv.com/img/logo-white.svg" alt="True Grace Logo">
+                <a href="index.html">Home</a>
+                <button>Giving</button>
+                <button>Contact</button>       
+                <img id="menu" src="https://deliver.sirv.com/img/menu.svg" alt="Menu" role="button" aria-label="Toggle Navigation">
+            </nav>
+        </header>
+        <!-- contact form -->
+        <div class="popup-contact-form" id="popupContactForm">
+            <div class="popup-content">
+                <span class="close-btn" id="closeContact">&times;</span>
+                <h2 class="popup-heading">CONTACT US</h2>
+                <form id="contactForm" action="https://formspree.io/f/xkgwonyj" method="POST">
+                    <div class="input">
+                        <label for="name">NAME:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="email">EMAIL:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="phone">PHONE:</label>
+                        <input type="phone" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="message">MESSAGE:</label>
+                        <textarea id="message" rows="6" name="message" required></textarea>
+                    </div>
+                    <button class="submit-btn" type="submit">SUBMIT</button>
+                </form>
+                <p style="font-size:0.9rem;font-weight:300">You can also email us directly at <a style="color:#f1683a;font-weight:500" href="mailto:truegraceinfo@gmail.com">truegraceinfo@gmail.com</a></p>
+                <div id="formResponse" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- give form -->
+        <div class="popup-giving" id="popupGiving" role="dialog" aria-labelledby="givingHeading" aria-modal="true">
+            <div class="popup-content">
+                <span class="close-btn" id="closeGiving">&times;</span>
+                <h2>Giving</h2>
+                <p>If you would like to partner financially with True Grace Ministries, you can give in the following ways:</p>
+                <h3>Mail check to:</h3>
+                <p>
+                    True Grace Ministries Int'l<br>
+                    P.O. Box 142<br>
+                    Salado, TX 76571
+                </p>
+                <h3>Securely online via Tithely:</h3>
+                <div class="give-options">
+                    <a href="https://give.tithe.ly/?formId=052dbfa3-3f90-4052-983c-712378670098&amount=5000" target="_blank">$50</a>
+                    <a href="https://give.tithe.ly/?formId=052dbfa3-3f90-4052-983c-712378670098&amount=10000" target="_blank">$100</a>
+                    <a href="https://give.tithe.ly/?formId=052dbfa3-3f90-4052-983c-712378670098&amount=50000" target="_blank">$500</a>
+                    <a href="https://give.tithe.ly/?formId=052dbfa3-3f90-4052-983c-712378670098&amount=100000" target="_blank">$1000</a>
+                </div>
+                <button class="tithely-give-button" data-form="052dbfa3-3f90-4052-983c-712378670098">Other Amount</button>
+                <script src="https://static.tithely.com/give/give.js" defer></script>
+            </div>
+        </div>
+        
+
+        <!-- menu -->
+        <div class="popup-menu" id="popupMenu">
+            <div class="menu-items">
+                <span class="close-btn" id="closeMenu">&times;</span>
+                <h1 class="menu-heading">MENU</h1>
+                <a href="#grace-on-demand" class="menu-link">Login</a>
+                <a href="#grace-on-demand" class="menu-link">Register</a>
+                <button class="menu-button">Giving</button>          
+                <a href="#sermons" class="menu-link">Sermons</a>
+                <a href="#podcast" class="menu-link">Podcast</a>
+                <a href="#resources" class="menu-link">Resources</a>
+                <button class="menu-button">Contact</button>
+            </div>
+        </div>
+
+        <!-- main -->
+        <div class="hero"></div>
+        
+        <div class="title">
+            <h2>What's Happening at True Grace?</h2>
+            <h4>A month-by-month summary</h4>
+        </div>
+        <!-- Updates Section -->
+        <div class="updates">
+            <div class="points">
+                <h3 id="june-2024">June 2024:</h3>
+                <ul>
+                    <li>The vision of <em>True Grace Ministries International</em> is born with a two-fold mission:
+                        <ul>
+                            <li><em>To educate people in a proper understanding of the Bible, as interpreted in its original languages, with an emphasis on grace theology.</em></li>
+                            <li><em>To train, equip, mentor and support pastors, missionaries and ministry leaders who will plant, lead, or be on staff at Biblically-sound, grace-oriented churches in the U.S. and across the globe.</em></li>
+                        </ul>
+                    </li>
+                    <li><em>True Grace Ministries International</em> submits application for 501c3 non-profit status.</li>
+                    <li>Founding board members are established: Bryan Threlkeld, Wendi Threlkeld, and David Uechi.</li>
+                </ul>
+            
+                <h3 id="july-2024" style="margin-top:2rem;">July 2024:</h3>
+                <ul>
+                    <li>Jordan Davies commits to be our media director and create the first phase of our website/online presence.</li>
+                    <li><em>True Grace Ministries</em> signs a contract to partner with the Grace School of Theology and their ‘Grace on Demand’ training materials, providing <em>True Grace Ministries</em> with hundreds of hours of top-notch grace-oriented, biblical training materials, as well as access to their ministry certification program.</li>
+                    <li><em>True Grace Ministries</em> establishes their domain name, email, logos, and preliminary website. Our website is <a href="https://truegrace.online" target="_blank">truegrace.online</a>, and our email is: truegraceinfo@gmail.com.</li>
+                </ul>
+            
+                <h3 id="august-2024" style="margin-top:2rem;">August 2024:</h3>
+                <ul>
+                    <li><em>True Grace Ministries</em> receives their full 501c-3 status. Praise God!</li>
+                    <li><em>True Grace Ministries</em> establishes a checking account at First Texas Bank.</li>
+                    <li><em>True Grace Ministries</em> begins fund-raising efforts.</li>
+                    <li>Executive Director, Bryan Threlkeld, leads an informational meeting for <em>True Grace Ministries</em> at Hill Country Bible Church Georgetown.</li>
+                    <li>Executive Director, Bryan Threlkeld, casts the vision for <em>True Grace Ministries</em> with various individuals and small groups at Hill Country Bible Church Georgetown.</li>
+                    <li>Plans are underway for creating a video/podcasting studio.</li>
+                </ul>
+            
+                <h3 id="september-2024" style="margin-top:2rem;">September 2024:</h3>
+                <ul>
+                    <li><em>True Grace Ministries</em> establishes their business address as PO Box 142, Salado, TX, 76571.</li>
+                    <li><em>True Grace Ministries</em> holds their official Fall 2024 Board Meeting.</li>
+                    <li>Midtown Church in Brownwood, TX begins using our “Grace on Demand” materials for training, and they inform <em>True Grace Ministries</em> that they have 2–3 individuals who may wish to enter our video program.</li>
+                    <li>Funding available for video/podcasting studio and work on the studio begins.</li>
+                </ul>
+            
+                <h3 id="october-2024" style="margin-top:2rem;">October 2024:</h3>
+                <ul>
+                    <li>Penny Buchanan commits to oversee our accounting, finances and taxes.</li>
+                    <li>Bryan T. leads a session on church-planting at the 2024 Free Grace Alliance (FGA) National Conference.</li>
+                    <li>Bryan T. invited to speak on pastoral training and church-planting at the 2025 FGA National Conference.</li>
+                    <li>Connections and partnerships are established between <em>True Grace Ministries</em> and other grace-oriented ministries, with the end-goal to provide more quality training materials on our website: <a href="https://truegrace.online" target="_blank">truegrace.online</a>.</li>
+                    <li>A couple in Burnet, TX commits to fund our 2-year contract with the Grace School of Theology. A major praise and answer to prayer!</li>
+                </ul>
+            
+                <h3 id="november-2024" style="margin-top:2rem;">November 2024:</h3>
+                <ul>
+                    <li>Website Phase 2 completed by Bryan Threlkeld and Jordan Davies.</li>
+                    <li>Mark Wadsworth commits to do post-editing work for <em>True Grace Ministries</em> podcasts and videos.</li>
+                    <li>The Association of Hill Country Churches commits to train future pastors using the same instructors and grace-oriented courses that we offer at <em>True Grace Ministries</em>.</li>
+                    <li>Discussions are underway regarding Bryan Threlkeld and Pastor Danny Box possibly co-teaching a class on Free Grace Church Planting at the Grace School of Theology (a seminary in <em>The Woodlands, TX</em>).</li>
+                </ul>
+            
+                <h3 id="december-2024" style="margin-top:2rem;">December 2024:</h3>
+                <ul>
+                    <li>Video/podcasting studio complete.</li>
+                    <li>Bryan writing Biblical material and filming videos for our website, including:
+                        <ul>
+                            <li>A <em>True Grace Ministries</em> Overview video, explaining our vision and mission.</li>
+                            <li>A podcast entitled: <em>‘Tipping Sacred Cows’</em>, where we cover in-depth theological issues.</li>
+                            <li>A <em>‘Bible Mysteries’</em> Video Series, where we tackle difficult to understand Bible passages in 5 minutes or less.</li>
+                        </ul>
+                    </li>
+                    <li>We begin exploring the possibility of a partnership with the <em>Ephesus Biblical Training Center</em> (Chris Morrison, Founder and Executive Director).</li>
+                    <li>Year-to-date contributions (as of Dec 13, 2025) to <em>True Grace Ministries International</em> = $32,850.</li>
+                </ul>
+            
+                <h3 id="january-2025" style="margin-top:2rem;">Coming in January 2025:</h3>
+                <ul>
+                    <li><em>‘Tipping Sacred Cows’</em> weekly podcast release.</li>
+                    <li><em>‘Bible Mysteries’</em> video series bi-monthly release.</li>
+                    <li><em>True Grace Ministries</em> Winter Board Meeting.</li>
+                    <li>Adding new, outstanding biblical/theological training resources on our website, including:
+                        <ul>
+                            <li><em>Bible & Theology Matters Podcast</em> with Dr. Paul Weaver of Dallas Seminary.</li>
+                            <li><em>Grace Life Ministries Resources</em> - Dr. Charlie Bing.</li>
+                            <li><em>The Free Grace Alliance</em> resources.</li>
+                            <li><em>Leading Grace Magazine</em>.</li>
+                            <li><em>Evantell Ministries</em>.</li>
+                            <li><em>Grace Walk Ministries</em>.</li>
+                            <li><em>Kids Talk About God</em> resources.</li>
+                            <li><em>Through the Bible Radio</em> with Dr. J Vernon McGee.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="shortcuts">
+                <h4><a href="#june-2024">June 2024</a></h4>
+                <h4><a href="#july-2024">July 2024</a></h4>
+                <h4><a href="#august-2024">August 2024</a></h4>
+                <h4><a href="#september-2024">September 2024</a></h4>
+                <h4><a href="#october-2024">October 2024</a></h4>
+                <h4><a href="#november-2024">November 2024</a></h4>
+                <h4><a href="#december-2024">December 2024</a></h4>
+                <h4><a href="#january-2025">January 2025</a></h4>
+                <hr>
+                <div class="info">
+                    <p><strong>Provided by</strong></p>
+                    <div class="author">
+                        <img src="https://deliver.sirv.com/img/sermons/pastor-bryan.jpeg" alt="Pastor Bryan Threlkeld">
+                        <div>
+                            <p>Bryan Threlkeld</p>
+                            <small>Founder, Pastor</small>
+                        </div>
+                    </div>
+                    <p><strong>Contributors</strong></p>
+                    <div class="contributor">
+                        <img src="https://deliver.sirv.com/img/sermons/jordan.jpg" alt="Jordan Davies">
+                        <div>
+                            <p>Jordan Davies</p>
+                            <small>Media Director</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

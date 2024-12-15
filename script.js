@@ -9,6 +9,7 @@ const contactButtons = Array.from(document.querySelectorAll("button"))
     .filter(button => button.textContent.trim().toLowerCase() === "contact");
 const giveButtons = Array.from(document.querySelectorAll("button"))
     .filter(button => button.textContent.trim().toLowerCase() === "giving");
+const updatesBtn = document.getElementById("updates");
 
 const closeContactBtn = document.getElementById("closeContact");
 const closeGivingBtn = document.getElementById("closeGiving");
@@ -79,6 +80,10 @@ giveButtons.forEach(button => {
         popupGiving.style.display = "flex";
     });
 });
+
+updatesBtn.addEventListener('click', () => {
+    window.location.href = 'updates.html';
+})
 
 menuBtn.addEventListener('click', () => {
     popupMenu.style.display = "flex";
