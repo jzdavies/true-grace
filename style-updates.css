@@ -388,6 +388,7 @@ nav button {
     margin: 0;
     padding: 0;
     background: -webkit-linear-gradient(130deg,#2d254b, #152553);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
